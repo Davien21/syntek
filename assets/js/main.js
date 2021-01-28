@@ -290,7 +290,7 @@ $(document).ready(function() {
     });
     /* ======= Declaratives =======*/
     $('section.syntek-testimonial .item-box').addClass('border');
-   
+    $(".currentYear").text((new Date).getFullYear())
     /* ======= Extras =======*/
     // img zoom
      $(".img-zoom").magnificPopup({
