@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Syntek Xtreme Fuel Distributions Limited | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/imgs/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <link rel="stylesheet" href="./assets/css/et-lineicons.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/flaticon.css" />
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/flexslider.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="./assets/css/extra-responsive.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body class="bg-grey">
+    <div id="syntek-page">
+      <a href="#" class="js-syntek-nav-toggle syntek-nav-toggle"><i></i></a>
+      <!-- Sidebar Section -->
+      <aside id="syntek-aside">
+        <!-- Logo -->
+        <div class="syntek-logo">
+          <a href="index.html"
+            ><img
+              src="assets/imgs/syntek-logo-horizontal.png"
+              alt="Syntek Logo"
+          /></a>
+        </div>
+        <!-- Menu -->
+        <header>
+          <nav id="syntek-main-menu">
+            <ul class="text-center">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="./cart.html">Your Cart <span style="padding: 2px 10px;" class="cart-quantity ml-1 badge-danger rounded">0</span></a></li>
+              <!-- <li><a href='blog.html'>Blog</a></li> -->
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Info -->
+
+        <!-- Footer -->
+        <div class="syntek-footer" aria-label="Navigation footer">
+          <ul class="call-to-action flex">
+            <li
+              class="flex-col px-2 justify-content-center"
+              aria-label="Pinterest"
+            >
+              <a href="#" class="text-white">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+            <li
+              class="flex-col px-2 justify-content-center"
+              aria-label="Instagram"
+            >
+              <a
+                target="_blank"
+                href="https://www.instagram.com/Syntek"
+                class="text-white"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li
+              class="flex-col px-2 justify-content-center"
+              aria-label="Facebook"
+            >
+              <a href="" class="text-white">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li
+              class="flex-col px-2 justify-content-center"
+              aria-label="Twitter"
+            >
+              <a href="" class="text-white">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Main Section -->
+      <main id="syntek-main" class="">
+        <section class="col-md-8 col-lg-7 col-xl-6 mx-auto mx-lg-5 py-4 py-md-0">
+           
+          <form class="mt-5" id="shipping-details-form">
+            <legend>Shipping Information</legend>
+            <fieldset class="pt-3">
+              <div class="form-group"> 
+                <input class="custom-input-tag" type="text" name="firstName" required="" placeholder="First Name">
+              </div>
+              <div class="form-group"> 
+                <input class="custom-input-tag" type="text" name="lastName" required="" placeholder="Last Name">
+              </div>
+              <div class="form-group"> 
+                <input class="custom-input-tag" type="email" name="email" required="" placeholder="Email Address">
+              </div>
+              <div class="form-group">
+                <input class="custom-input-tag" type="text" name="address" required="" placeholder="Home Address">
+              </div>
+              <div class="form-group">
+                <textarea class="custom-input-tag" placeholder="Additional Information    (Optional)" rows="2" name="additionalInfo"></textarea>
+              </div>
+              <div class="form-group">
+                <input class="custom-input-tag" type="text" name="state" required="" placeholder="State">
+              </div>
+              <div class="form-group">
+                <input class="custom-input-tag" type="text" name="city" required="" placeholder="City">
+              </div>
+              
+              <div class="form-group">
+                <input class="custom-input-tag" type="tel" name="phone" required="" placeholder="Phone Number">
+              </div>
+            </fieldset>
+            <div class="d-flex justify-content-between flex-wrap">
+              <a href="./cart.html" class="btn-default semi-bold btn rounded py-3">
+                Back to cart
+              </a>
+              <form>
+                <script src="https://js.paystack.co/v1/inline.js"></script>
+                <button onclick="makePayment()" class=" paper-box-shadow btn-orange py-3 btn-default btn-orange semi-bold btn rounded py-3">
+                  Proceed with Payment
+                </button>
+              </form>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <!-- Js -->
+      <script src="./assets/js/jquery.min.js"></script>
+      <script src="./assets/js/modernizr-2.6.2.min.js"></script>
+      <script src="./assets/js/jquery.easing.1.3.js"></script>
+      <script src="./assets/js/bootstrap.min.js"></script>
+      <script src="./assets/js/jquery.waypoints.min.js"></script>
+      <script src="./assets/js/jquery.flexslider-min.js"></script>
+      <script src="./assets/js/sticky-kit.min.js"></script>
+      <script src="./assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="./assets/js/all.min.js"></script>
+      <script src="./assets/js/owl.carousel.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+      <script>
+        let notyf = new Notyf({
+          type: "success",
+          position: {
+            x: "right",
+            y: "top",
+          },
+          duration: 2000,
+        });
+      </script>
+      <script src="./assets/js/main.js"></script>
+      <script src="./assets/js/cart.js"></script>
+      <script src="./assets/js/shipping.js"></script>
+    </div>
+  </body>
+</html>
