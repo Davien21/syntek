@@ -1,2 +1,2 @@
-let baseUrl = "http://localhost:5000/api/"
+let baseUrl = "https://syntek-api.herokuapp.com/api/"
 let productsEndpoint = baseUrl + "products"

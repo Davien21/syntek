@@ -16,7 +16,7 @@ let orderForm = () => {
 };
 
 async function saveOrder(order) {
-  const url = "http://localhost:5000/api/orders/";
+  const url = "https://syntek-api.herokuapp.com/api/orders/";
   try {
     let response = await fetch(url, {
       method: "POST",
@@ -36,6 +36,7 @@ async function saveOrder(order) {
     
     let errorMessage = "something went wrong, please try again later"
     notyf.error(errorMessage)
+    console.log(ex)
     return { status: false, message: ex };
   }
 }
