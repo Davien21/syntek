@@ -1,0 +1,13 @@
+ 
+nav#syntek-main-menu li {
+  padding: 0.5rem 0 !important;
+}
+ 
+nav#syntek-main-menu li.active a {
+  border-radius: 12px;
+	box-shadow: 0 6px 10px -4px rgba(0,0,0,.15) !important;
+	background-color: #fff;
+  padding: 5px 0 !important;
+  color: #5bae32 !important;
+}
+ 

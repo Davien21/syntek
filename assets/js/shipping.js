@@ -1,17 +1,17 @@
-$("form").on("submit", function (e) {
-  e.preventDefault();
-});
+$("form").on("submit", function (e) { e.preventDefault()});
 let orderForm = () => {
   let $inputs = $(
     "form#shipping-details-form :input, form#shipping-details-form textarea, form#shipping-details-form select"
   );
   let values = {};
   values.products = JSON.parse(localStorage.getItem("cart"));
+  
   $inputs.each(function () {
     if (this.name == "additionalInfo" && !$(this).val()) return;
     if (!this.name) return;
     values[this.name] = $(this).val();
   });
+  console.log(values)
   return (order = values);
 };
 
@@ -26,9 +26,8 @@ async function saveOrder(order) {
     response = await response.json().then((data) => data);
 
     let successMessage = "You have successfully purchased these items";
-    let errorMessage = "something went wrong, please try again later"
     
-    if (response.status !== true) notyf.error(response.message)
+    if (response.status !== true) return notyf.error(response.message)
     if (response.status === true) notyf.success(successMessage);
     setTimeout(redirectToThankYouPage, 2000)
     return response;
@@ -42,30 +41,43 @@ async function saveOrder(order) {
 }
 
 async function makePayment() {
+  let order = orderForm();
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  let totalCost = getTotalCartCost(cart, allProducts)
   let handler = PaystackPop.setup({
     key: "pk_test_01c02c8965f0795cdb3907687f28a3df955d2b34",
-    email: orderForm().email,
-    amount: 10000,
+    email: order.email,
+    amount: totalCost + "00",
     metadata: {
       custom_fields: [
         {
-          customer_phone: orderForm().phone,
+          customer_phone: order.phone,
         },
       ],
     },
     callback: function (response) {
-      let order = orderForm();
       order.transactionDetails = response;
       saveOrder(order);
-    },
-    onClose: function () {
-      // alert("window closed");
-    },
+      localStorage.removeItem("cart")
+    }
   });
   handler.openIframe();
 }
-// notyf.success('message');
 
 function redirectToThankYouPage () {
   window.location = "./thankYou.html"
 }
+
+
+async function getAllProducts() {
+  try {
+    let response = await fetch(productsEndpoint);
+    response = await response.json().then((data) => data);
+    return response;
+  } catch (ex) {
+    return { status: false, message: ex };
+  }
+}
+
+
+ 
