@@ -1,4 +1,22 @@
 $("form").on("submit", function (e) { e.preventDefault()});
+let statesUrl = "http://locationsng-api.herokuapp.com/api/v1/states"
+
+async function renderStatesSelect() {
+  try {
+    let response = await fetch(statesUrl)
+    response = await response.json().then((data) => data);
+    $("select[name=state]").append(statesOptionsHTML(response))
+    return response;
+  } catch (ex) {
+    return { status: false, message: ex };
+  }
+}
+
+let statesOptionsHTML = (states) => {
+  return states.map(state => state = `<option>${state.name}</option>`)
+}
+
+renderStatesSelect()
 let orderForm = () => {
   let $inputs = $(
     "form#shipping-details-form :input, form#shipping-details-form textarea, form#shipping-details-form select"
