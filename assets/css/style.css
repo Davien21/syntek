@@ -143,6 +143,7 @@ input[type="checkbox"]:focus,
 textarea:focus {
   outline: none;
 }
+select.default,
 input[type="password"],
 input[type="email"],
 input[type="tel"],
