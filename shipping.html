@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="./assets/css/flexslider.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/extra-responsive.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-
   </head>
 
   <body class="bg-grey">
@@ -39,8 +41,17 @@
             <ul class="text-center">
               <li class="active"><a href="index.html">Home</a></li>
               <li class=""><a href="products.html">Products</a></li>
-              <li><a href="">About Us</a></li>
-              <li><a href="./cart.html">Your Cart <span style="padding: 2px 10px;" class="cart-quantity ml-1 badge-danger rounded">0</span></a></li>
+              <li><a href="">About XFT</a></li>
+              <li>
+                <a href="./cart.html"
+                  >Your Cart
+                  <span
+                    style="padding: 2px 10px"
+                    class="cart-quantity ml-1 badge-danger rounded"
+                    >0</span
+                  ></a
+                >
+              </li>
               <!-- <li><a href='blog.html'>Blog</a></li> -->
               <li><a href="#">Contact Us</a></li>
             </ul>
@@ -93,47 +104,101 @@
       </aside>
       <!-- Main Section -->
       <main id="syntek-main" class="">
-        <section class="col-md-8 col-lg-7 col-xl-6 mx-auto mx-lg-5 py-4 py-md-0">
-           
+        <section
+          class="col-md-8 col-lg-7 col-xl-6 mx-auto mx-lg-5 py-4 py-md-0"
+        >
           <form class="mt-5" id="shipping-details-form">
             <legend>Shipping Information</legend>
             <fieldset class="pt-3">
-              <div class="form-group"> 
-                <input class="custom-input-tag" type="text" name="firstName" required="" placeholder="First Name">
-              </div>
-              <div class="form-group"> 
-                <input class="custom-input-tag" type="text" name="lastName" required="" placeholder="Last Name">
-              </div>
-              <div class="form-group"> 
-                <input class="custom-input-tag" type="email" name="email" required="" placeholder="Email Address">
+              <div class="form-group">
+                <input
+                  class="custom-input-tag"
+                  type="text"
+                  name="firstName"
+                  required=""
+                  placeholder="First Name"
+                />
               </div>
               <div class="form-group">
-                <input class="custom-input-tag" type="text" name="address" required="" placeholder="Home Address">
+                <input
+                  class="custom-input-tag"
+                  type="text"
+                  name="lastName"
+                  required=""
+                  placeholder="Last Name"
+                />
               </div>
               <div class="form-group">
-                <textarea class="custom-input-tag" placeholder="Additional Information (Optional)" rows="2" name="additionalInfo"></textarea>
+                <input
+                  class="custom-input-tag"
+                  type="email"
+                  name="email"
+                  required=""
+                  placeholder="Email Address"
+                />
               </div>
               <div class="form-group">
-                <select class="default custom-input-ta" name="state" id="" required="">
-                  <option value="" disabled selected>Please select a State</option>
+                <input
+                  class="custom-input-tag"
+                  type="text"
+                  name="address"
+                  required=""
+                  placeholder="Home Address"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="custom-input-tag"
+                  placeholder="Additional Information (Optional)"
+                  rows="2"
+                  name="additionalInfo"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <select
+                  class="default custom-input-ta"
+                  name="state"
+                  id=""
+                  required=""
+                >
+                  <option value="" disabled selected>
+                    Please select a State
+                  </option>
                 </select>
-                 
               </div>
               <div class="form-group">
-                <input class="custom-input-tag" type="text" name="city" required="" placeholder="City">
+                <input
+                  class="custom-input-tag"
+                  type="text"
+                  name="city"
+                  required=""
+                  placeholder="City"
+                />
               </div>
-              
+
               <div class="form-group">
-                <input class="custom-input-tag" type="tel" name="phone" required="" placeholder="Phone Number">
+                <input
+                  class="custom-input-tag"
+                  type="tel"
+                  name="phone"
+                  required=""
+                  placeholder="Phone Number"
+                />
               </div>
             </fieldset>
             <div class="d-flex justify-content-between flex-wrap">
-              <a href="./cart.html" class="btn-default semi-bold btn rounded py-3">
+              <a
+                href="./cart.html"
+                class="btn-default semi-bold btn rounded py-3"
+              >
                 Back to cart
               </a>
               <form>
                 <script src="https://js.paystack.co/v1/inline.js"></script>
-                <button onclick="makePayment()" class=" paper-box-shadow btn-orange py-3 btn-default btn-orange semi-bold btn rounded py-3">
+                <button
+                  onclick="makePayment()"
+                  class="paper-box-shadow btn-orange py-3 btn-default btn-orange semi-bold btn rounded py-3"
+                >
                   Proceed with Payment
                 </button>
               </form>
