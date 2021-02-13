@@ -1,5 +1,5 @@
 $("form").on("submit", function (e) { e.preventDefault()});
-let statesUrl = "http://locationsng-api.herokuapp.com/api/v1/states"
+let statesUrl = "https://locationsng-api.herokuapp.com/api/v1/states"
 
 async function renderStatesSelect() {
   try {
