@@ -61,10 +61,10 @@
  
       </aside>
       <!-- Main Section -->
-      <main id="syntek-main">
-        <section class="px-3 mt-5 pt-4 mt-md-0 pt-md-0 px-0 pl-md-5 pl-lg-3">
+      <main id="syntek-main" class=" my-5 pt-4 mt-md-0 pt-md-0">
+        <section class="px-3 pl-md-5 pl-lg-4 ml-md-5 ml-xl-0">
           
-           <div class="container-fluid mb-3 py-1 px-3 bg-white paper-box">
+           <div class="container-fluid my-3 py-1 px-3 bg-white paper-box">
              <form action="">
                <div class="form-group mb-0 d-flex align-items-center">
                  <img style="max-width: 20px;" class="my-auto" src="./assets/imgs/svgs/search.svg" alt="">
@@ -72,6 +72,77 @@
                </div>
              </form>
            </div>
+        </section>
+        <section class="px-3 pl-md-5 pl-lg-4 ml-md-5 ml-xl-0">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col px-0 owl-carousel owl-theme">
+                <div class="item col">
+                  <div class="row paper-box py-4">
+                    <div class="col-auto">
+                      <img class="small-svgs" src="./assets/imgs/svgs/order.svg" alt="">
+                    </div>
+                    <div class="col">
+                      <p class="h4 order-count">0</p>
+                      <p>Total Orders</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item col">
+                  <div class="row paper-box py-4">
+                    <div class="col-auto">
+                      <img class="small-svgs" src="./assets/imgs/svgs/product.svg" alt="">
+                    </div>
+                    <div class="col">
+                      <p class="h4 product-count">0</p>
+                      <p>Total Products</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item col">
+                  <div class="row paper-box py-4">
+                    <div class="col-auto">
+                      <img class="small-svgs" src="./assets/imgs/svgs/money.svg" alt="">
+                    </div>
+                    <div class="col">
+                      <div class="h4">
+                        <span class="h4">₦</span>
+                        <span class="h4 amount-grossed">0</span>
+                        <p>Amount Grossed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section class="px-3 pl-md-5 pl-lg-4 ml-md-5 ml-xl-0">
+          <div class="container-fluid px-3 px-md-0">
+            <div class=" paper-box mt-3 p-3">
+              <div class="align-items-center flex-wrap-reverse d-flex justify-content-between">
+                <div class=" text-black">
+                  <span class="chart-type">Number</span>
+                  <span> of orders</span>
+                </div>
+                <div class="">
+                  <form action="">
+                    <div class="">
+                      <select class="border default" name="chartFilter" id="">
+                        <option value="" disabled>--Filter--</option>
+                        <option value="orderCount" selected>Order no.</option>
+                        <option value="orderCost">Amount grossed.</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div style="overflow-x: auto;overflow-y: hidden;" id="chart"></div>
+
+            </div>
+          </div>
         </section>
       </main>
     </div>
@@ -98,8 +169,11 @@
         },
         duration: 2000,
       });
-    </script>
+      </script>
+    <script src="./assets/js/endpoints.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/indexPage.js"></script>
+    <script src="./assets/js/apexcharts.js"></script>
+    <script src="./assets/js/chartService.js"></script>
+    <script src="./assets/js/adminPortal.js"></script>
   </body>
-</html>
+  </html>

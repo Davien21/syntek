@@ -89,7 +89,7 @@ function renderEmptyCartHTML() {
   $(".cart-quantity").text(cartQuantity);
 }
 
-function renderProducts(products) {
+function renderProducts({ data: products }) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   if (cart.length === 0) return renderEmptyCartHTML();
   let cartQuantity = getCartQuantityInLocalStorage();
@@ -170,6 +170,7 @@ function removeItem(btn) {
 function getTotalCartCost(cart, products) {
   let totalCost = 0;
   cart = cart || [];
+  console.log(products)
   cart.forEach((cartItem) => {
     let product = products.find(
       (product) => cartItem.productId === product._id

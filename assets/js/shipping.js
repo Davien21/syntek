@@ -34,7 +34,7 @@ let orderForm = () => {
 };
 
 async function saveOrder(order) {
-  const url = "https://syntek-api.herokuapp.com/api/orders/";
+  const url = ordersEndpoint;
   try {
     let response = await fetch(url, {
       method: "POST",
@@ -61,7 +61,7 @@ async function saveOrder(order) {
 async function makePayment() {
   let order = orderForm();
   let cart = JSON.parse(localStorage.getItem("cart"));
-  let totalCost = getTotalCartCost(cart, allProducts)
+  let totalCost = getTotalCartCost(cart, allProducts.data)
   let handler = PaystackPop.setup({
     key: "pk_test_01c02c8965f0795cdb3907687f28a3df955d2b34",
     email: order.email,
