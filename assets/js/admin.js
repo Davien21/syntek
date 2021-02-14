@@ -24,12 +24,11 @@ $loading.hide()
 
  
 async function loginAdmin(user) {
-  const url = "http://localhost:5000/api/auth";
   $loading.addClass("d-flex justify-content-center align-items-center")
   $loading.show()
   
   try {
-    let response = await fetch(url, {
+    let response = await fetch(authEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),

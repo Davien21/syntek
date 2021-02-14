@@ -15,6 +15,8 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
+$("form").on("submit", function(e) {e.preventDefault()})
+
 async function loadDashboard() {
   let token = localStorage.getItem("authToken");
   try {
