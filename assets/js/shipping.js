@@ -29,7 +29,6 @@ let orderForm = () => {
     if (!this.name) return;
     values[this.name] = $(this).val();
   });
-  console.log(values)
   return (order = values);
 };
 
@@ -86,16 +85,6 @@ function redirectToThankYouPage () {
   window.location = "./thankYou.html"
 }
 
-
-async function getAllProducts() {
-  try {
-    let response = await fetch(productsEndpoint);
-    response = await response.json().then((data) => data);
-    return response;
-  } catch (ex) {
-    return { status: false, message: ex };
-  }
-}
-
+ 
 
  
