@@ -106,6 +106,7 @@ function renderSingleProduct(product, products) {
       "Are you sure you wish to modify this product?"
     );
     if (!willProcessProduct) return;
+    handleModifyProduct(product)
   });
 
   $("#single-product button#all-products").on("click", function () {
@@ -131,14 +132,14 @@ let singleProduct = (product) => {
             alt=""
           />
         </div>
-        <div class="col-12 col-md-8 px-3 py-4 text-center text-md-left">
-          <div class="d-flex py-2 flex-wrap">
-            <span class="pl-sm-0 col-sm-6 col-md-4 font-weight-bold">Name:</span>
-            <span class="col">${product.name}</span>
-          </div>
+        <div id="product-details" class="col-12 col-md-8 px-3 py-4 text-center text-md-left">
           <div class="d-flex py-2 flex-wrap">
             <span class="pl-sm-0 col-sm-6 col-md-4 font-weight-bold">Product id:</span>
             <span class="col">${product._id}</span>
+          </div>
+          <div class="d-flex py-2 flex-wrap">
+            <span class="pl-sm-0 col-sm-6 col-md-4 font-weight-bold">Name:</span>
+            <span class="col">${product.name}</span>
           </div>
           <div class="d-flex py-2 flex-wrap">
             <span class="pl-sm-0 col-sm-6 col-md-4 font-weight-bold">Price:</span>
@@ -159,7 +160,6 @@ let singleProduct = (product) => {
     </div>
   </section>`;
 };
- 
 
 let detailsHTML = (product) => {
   let html = ``;
@@ -181,3 +181,7 @@ let productDetailHTML = (key, value) => {
     </div>
   `;
 };
+
+function handleModifyProduct(product) {
+
+}

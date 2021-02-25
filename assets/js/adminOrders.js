@@ -216,11 +216,12 @@ function renderSingleOrder(order, orders) {
     );
     if (!willProcessOrder) return;
   });
-
+  
   $("#single-order button#all-orders").on("click", function () {
-    $("main #single-order").remove();
-    $("main > div").append(allOrders);
-    renderOrdersTable(orders);
+    getAllOrders();
+    // $("main #single-order").remove();
+    // $("main > div").append(allOrders);
+    // renderOrdersTable(orders);
   });
 }
 

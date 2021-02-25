@@ -300,34 +300,6 @@ input[type="checkbox"] {
   text-align: right;
 }
 
-/* ======= Scrollbar style ======= */
-::-webkit-scrollbar {
-  width: 0px;
-}
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-::-webkit-scrollbar-thumb {
-  background: #000;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #000;
-}
-
-/* ======= Selection style ======= */
-::-webkit-selection {
-  color: #fff;
-  background: rgba(229, 46, 113, 0.5);
-}
-::-moz-selection {
-  color: #fff;
-  background: rgba(229, 46, 113, 0.5);
-}
-::selection {
-  color: #fff;
-  background: rgba(229, 46, 113, 0.5);
-}
-
 /* owl theme */
 .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 20px;
@@ -2579,4 +2551,3 @@ button.update-product,
 button.view-product {
   /* width: 100%; */
 }
-
