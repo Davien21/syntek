@@ -1,0 +1,33 @@
+.strappy-table {
+  display: flex;
+  overflow-x: auto;
+  max-height: 200px;
+  flex-direction: column;
+}
+
+.strappy-table .thead,
+.strappy-table .tbody {
+  display: block;
+}
+
+.strappy-table .thead {
+  position: sticky;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.strappy-table .tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.strappy-table .tr .td {
+  position: relative;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+}

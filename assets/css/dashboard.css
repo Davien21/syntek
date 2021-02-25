@@ -1,13 +1,145 @@
- 
+* {
+  transition: 0.15s ease-in-out !important;
+  -webkit-transition: 0.15s ease-in-out !important;
+  -ms-transition: 0.15s ease-in-out !important;
+  -o-transition: 0.15s ease-in-out !important;
+  -moz-transition: 0.15s ease-in-out !important;
+  transition: 0.15s ease-in-out !important;
+}
+
 nav#syntek-main-menu li {
   padding: 0.5rem 0 !important;
 }
- 
+
 nav#syntek-main-menu li.active a {
   border-radius: 12px;
-	box-shadow: 0 6px 10px -4px rgba(0,0,0,.15) !important;
-	background-color: #fff;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff;
   padding: 5px 0 !important;
   color: #5bae32 !important;
 }
- 
+
+#order-status .active {
+  background-color: #dd0060;
+  color: #fff;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15) !important;
+}
+
+.def-pink {
+  background-color: #dd0060;
+  color: #fff;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15) !important;
+}
+
+form.search > div {
+  border-bottom: 1px solid #000 !important;
+}
+
+form.search input {
+  background: none;
+  width: auto;
+  margin-bottom: 0;
+}
+
+form.search img {
+  max-width: 45px;
+}
+
+form.search > div:focus-within {
+  border-bottom: 2px solid #dd0060 !important;
+}
+
+#chart {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+table.default {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  border-radius: 50%;
+  border: 0;
+  overflow-x: auto;
+}
+table.default tr {
+  background-color: #fff;
+}
+table.default thead tr {
+  background-color: initial;
+}
+
+table.default td,
+table.default th {
+  border: 0;
+  white-space: nowrap;
+}
+
+table.default td:first-child,
+table.default th:first-child {
+  position: sticky;
+  left: 0;
+}
+
+#table-container {
+  overflow-x: auto;
+}
+
+table.default td,
+table.default th {
+  padding-top: 0.6rem;
+}
+
+td li {
+  list-style-position: inside;
+}
+
+div#order-status div {
+  cursor: pointer;
+}
+
+div#order-status div:hover {
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+div#order-status div.active:hover {
+  color: #fff;
+  background-color: #dd0060;
+}
+
+table.default thead {
+  position: sticky;
+  top: 0;
+  background-color: #e9ecef !important;
+  z-index: 1000;
+}
+
+table.default thead tr th {
+  left: 0;
+  background-color: #e9ecef !important;
+}
+
+table.default tbody tr th {
+  background-color: #fff !important;
+}
+
+table.default tr:hover th {
+  color: #212529 !important;
+  background-color: #d8dadd !important;
+}
+
+#table-container {
+  max-height: 490px;
+}
+button.update-product,
+button.view-product,
+.def-btn {
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0;
+  font-family: "Rambla", sans-serif;
+}
+
+button.update-product,
+button.view-product {
+  /* width: 100%; */
+}

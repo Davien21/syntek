@@ -84,7 +84,3 @@ async function makePayment() {
 function redirectToThankYouPage () {
   window.location = "./thankYou.html"
 }
-
- 
-
- 
