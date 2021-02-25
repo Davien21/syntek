@@ -131,15 +131,3 @@ table.default tr:hover th {
 #table-container {
   max-height: 490px;
 }
-button.update-product,
-button.view-product,
-.def-btn {
-  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15) !important;
-  border-radius: 0;
-  font-family: "Rambla", sans-serif;
-}
-
-button.update-product,
-button.view-product {
-  /* width: 100%; */
-}

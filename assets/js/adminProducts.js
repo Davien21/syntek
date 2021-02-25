@@ -159,34 +159,7 @@ let singleProduct = (product) => {
     </div>
   </section>`;
 };
-
-let itemsCarouselHTML = (items) => {
-  let html = ``;
-  items.forEach((item) => {
-    html += carouselItemHTML(item);
-  });
-  return html;
-};
-
-let carouselItemHTML = (item) => {
-  let itemWord = item.quantity > 1 ? "Pieces" : "Piece";
-  return `
-  <div class="item card col" >
-    <div class=" py-4">
-      <div class="col-auto">
-        <img class="" src=${item.imageUrl} alt="" />
-      </div>
-      <div class="col">
-        <p class="font-weight-bold item-name mb-0">10 ml Foil Packs</p>
-        <div>
-          <span class="item-quantity">${item.quantity} ${itemWord} /</span>
-          <span class="item-cost">${item.price * item.quantity}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
-};
+ 
 
 let detailsHTML = (product) => {
   let html = ``;
